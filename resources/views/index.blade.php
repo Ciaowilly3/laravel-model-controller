@@ -12,12 +12,26 @@
     <body class="bg-dark">
         <div class="container">
             <h1 class="text-center text-primary mb-5">Movie</h1>
-            <ul class="text-white">
+            <div class="row justify-content-between gy-3">
                 @foreach ($movies as $movie )
-                <li>{{ $movie->title}}</li>    
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center flex-column">
+                            <h4 class="text-center">
+                            {{ $movie->title}}
+                            </h4>
+                            <ul>
+                                <li><h6>{{$movie->original_title}}</h6></li>
+                                <li>{{$movie->nationality}}</li>
+                                <li>{{$movie->date}}</li>
+                                <li>{{$movie->vote}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                   
                 @endforeach
-                
-            </ul>
+            </div>
         </div>
     </body>
 </html> 
