@@ -12,6 +12,12 @@
     <body class="bg-dark">
         <div class="container">
             <h1 class="text-center text-primary mb-5">Movie</h1>
+            <ul class="text-white">
+                @foreach ($movies as $movie )
+                <li>{{ $movie->title}}</li>    
+                @endforeach
+                
+            </ul>
         </div>
     </body>
 </html> 
